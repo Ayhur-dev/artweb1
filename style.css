@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    height: 100vh;
+    width: 100px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    overflow-x: hidden;
+    transition: width 0.3s;
+    padding-top: 20px;
+}
+
+/* Expanded sidebar styling */
+.sidebar.expanded {
+    width:max-content;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: underline;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+/* Show links when sidebr is expandd */
+.sidebar.expanded a {
+    opacity: 1;
+}
+
+/* Toggle button styling */
+.toggle-btn {
+    font-size: 24px;
+    cursor: auto;
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Content Styling */
+.content {
+    margin-left: 600px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+/* Shift Content when sidebr is expended */
+.sidebar.expanded ~ .content {
+    margin-left: 250px;
+
+}
+
